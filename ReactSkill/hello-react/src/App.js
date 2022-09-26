@@ -1,8 +1,8 @@
 import React from "react";
-import EventPractice from './EventPractice';
+import Counter from "./Counter";
 
-const App = () =>{
-  return <EventPractice />
+const App = () => {
+  return <Counter />;
 };
 
 export default App;
