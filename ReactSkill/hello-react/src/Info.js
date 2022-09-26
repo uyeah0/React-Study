@@ -5,8 +5,16 @@ const Info = () => {
   const [nickname, setNickname] = useState('');
 
   useEffect(() => {
+    console.log('effect');
     console.log(name);
+    return () => {
+      console.log('cleanup');
+      console.log(name);
+    };
   }, [name]);
+  // }, []);
+  // 언마운될 때만 뒷정리 함수를 호출하고 싶다면
+  // useEffect 함수의 두 번째 파라미터에 비어있는 배열 넣기
 
   const onChangeName = (e) => {
     setName(e.target.value);
